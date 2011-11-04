@@ -59,6 +59,7 @@ construction, properly aligned, scaled, and/or rotated.
 #- source
 %doc %{_texmfdistdir}/source/latex/psfrag/psfrag.dtx
 %doc %{_texmfdistdir}/source/latex/psfrag/psfrag.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,3 +70,5 @@ construction, properly aligned, scaled, and/or rotated.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
