@@ -19,6 +19,8 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
+%define		_unpackaged_subdirs_terminate_build	0
+
 %description
 Allows LaTeX constructions (equations, picture environments,
 etc.) to be precisely superimposed over Encapsulated PostScript
