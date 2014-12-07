@@ -6,7 +6,7 @@
 # catalog-version 3.04
 Name:		texlive-psfrag
 Version:	3.04
-Release:	8
+Release:	9
 Summary:	Replace strings in encapsulated PostScript figures
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/psfrag
