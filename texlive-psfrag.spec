@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/psfrag
-# catalog-date 2009-10-07 22:25:55 +0200
-# catalog-license other-free
-# catalog-version 3.04
 Name:		texlive-psfrag
-Version:	3.04
-Release:	12
+Version:	15878
+Release:	1
 Summary:	Replace strings in encapsulated PostScript figures
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/psfrag
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/psfrag.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/psfrag.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/psfrag.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/psfrag.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/psfrag.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/psfrag.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,12 +25,12 @@ from the figure and replacing them with a user specified LaTeX
 construction, properly aligned, scaled, and/or rotated.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -54,24 +48,11 @@ construction, properly aligned, scaled, and/or rotated.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.04-2
-+ Revision: 755227
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.04-1
-+ Revision: 719318
-- texlive-psfrag
-- texlive-psfrag
-- texlive-psfrag
-- texlive-psfrag
-
