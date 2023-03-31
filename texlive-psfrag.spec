@@ -1,6 +1,6 @@
 Name:		texlive-psfrag
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Replace strings in encapsulated PostScript figures
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/psfrag
