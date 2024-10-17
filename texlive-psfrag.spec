@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Replace strings in encapsulated PostScript figures
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/psfrag
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/psfrag
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/psfrag.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/psfrag.doc.r%{version}.tar.xz
